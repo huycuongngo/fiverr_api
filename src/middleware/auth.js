@@ -1,8 +1,4 @@
 const jwt = require('jsonwebtoken');
-const sequelize = require('../model/modelConnectDb');
-const initModel = require('../model/init-models')
-
-const model = initModel(sequelize)
 
 const encodeToken = (data) => {
   return jwt.sign({ data }, "KEY", { expiresIn: '10d' });
